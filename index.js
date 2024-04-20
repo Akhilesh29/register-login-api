@@ -18,6 +18,10 @@ mongoose.connect(process.env.mongodatabase, {
 // routes
 app.use(router);
 
+app.get('/', (req, res) => {
+  res.send(`API active`);
+});
+
 
 // start server
 app.listen(PORT, () => {
